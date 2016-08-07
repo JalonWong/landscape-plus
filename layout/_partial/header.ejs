@@ -22,13 +22,7 @@
         <a id="nav-search-btn" class="nav-icon fa-search" title="Search"></a>
       </nav>
       <nav id="sub-nav-social">
-        <% for (var i in theme.social){ %>
-          <% if (i.toLowerCase() == 'zhihu'){ %>
-            <a class="nav-icon if-zhihu" target="_blank" href="<%- url_for(theme.social[i]) %>" title="知乎"></a>
-          <% } else { %>
-            <a class="nav-icon <%= 'fa-' + i.toLowerCase() %>" target="_blank" href="<%- url_for(theme.social[i]) %>" title="<%= i %>"></a>
-          <% } %>
-				<% } %>
+        <%- partial('header-icon') %>
         <% if (theme.rss){ %>
           <a id="nav-rss-link" class="nav-icon fa-rss" href="<%- theme.rss %>" title="RSS Feed"></a>
         <% } %>
